@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 
 export default function ContactPage() {
   const t = useTranslations("contact");
+  const contactEmail = "meetingcost.team@gmail.com";
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
@@ -19,10 +20,10 @@ export default function ContactPage() {
             <div>
               <p className="text-gray-400 text-sm">{t("email_label")}</p>
               <a
-                href="mailto:contact@meetingcost.team"
+                href={`mailto:${contactEmail}`}
                 className="text-emerald-400 hover:text-emerald-300 transition-colors"
               >
-                contact@meetingcost.team
+                {contactEmail}
               </a>
             </div>
           </div>

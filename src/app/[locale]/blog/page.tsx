@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BlogPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
-  const posts = getAllPosts() as unknown as BlogPostPreview[];
+  const posts = (await getAllPosts()) as unknown as BlogPostPreview[];
 
   const formatDate = (dateStr: string) =>
     new Date(dateStr).toLocaleDateString(locale, {

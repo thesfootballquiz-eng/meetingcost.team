@@ -4,9 +4,9 @@ import { getAllPosts } from "@/lib/posts";
 
 const baseUrl = "https://meetingcost.team";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
 
   const staticPaths = ["", "/blog", "/contact", "/policy", "/privacy"];
 

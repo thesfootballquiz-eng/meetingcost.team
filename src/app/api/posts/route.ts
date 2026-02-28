@@ -10,10 +10,10 @@ export async function GET(request: NextRequest) {
     if (!authenticated) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
-    return NextResponse.json({ posts: getAllPostsAdmin() });
+    return NextResponse.json({ posts: await getAllPostsAdmin() });
   }
 
-  return NextResponse.json({ posts: getAllPosts() });
+  return NextResponse.json({ posts: await getAllPosts() });
 }
 
 export async function POST(request: NextRequest) {
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
       updatedAt: new Date().toISOString(),
     };
 
-    addPost(post);
+    await addPost(post);
     return NextResponse.json({ post }, { status: 201 });
   } catch {
     return NextResponse.json({ error: "Invalid data" }, { status: 400 });

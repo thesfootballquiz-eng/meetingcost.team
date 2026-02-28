@@ -36,7 +36,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = getPostBySlug(slug) as unknown as BlogPostFull | undefined;
+  const post = (await getPostBySlug(slug)) as unknown as BlogPostFull | undefined;
 
   if (!post) {
     return {
@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
 
-  const post = getPostBySlug(slug) as unknown as BlogPostFull | undefined;
+  const post = (await getPostBySlug(slug)) as unknown as BlogPostFull | undefined;
   if (!post) notFound();
 
   const title = post.title[locale] || post.title["en"] || "Untitled";

@@ -13,11 +13,11 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   const { id } = await params;
 
   // Try by slug first (public), then by ID (admin)
-  let post = getPostBySlug(id);
+  let post = await getPostBySlug(id);
   if (!post) {
     const authenticated = await isAuthenticated();
     if (authenticated) {
-      post = getPostById(id);
+      post = await getPostById(id);
     }
   }
 
@@ -38,11 +38,11 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 
   try {
     const body = await request.json();
-    const success = updatePost(id, body);
+    const success = await updatePost(id, body);
     if (!success) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
-    const post = getPostById(id);
+    const post = await getPostById(id);
     return NextResponse.json({ post });
   } catch {
     return NextResponse.json({ error: "Invalid data" }, { status: 400 });
@@ -56,7 +56,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
   }
 
   const { id } = await params;
-  const success = deletePost(id);
+  const success = await deletePost(id);
   if (!success) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }

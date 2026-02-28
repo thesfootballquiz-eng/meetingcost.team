@@ -1,3 +1,5 @@
+import { getRedisClient } from "./redis";
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -12,94 +14,79 @@ export interface BlogPost {
   updatedAt: string;
 }
 
-import fs from "fs";
-import path from "path";
+const POSTS_KEY = "blog:posts";
 
-let posts: BlogPost[] = [];
-let loaded = false;
-
-function getPostsFilePath(): string {
-  return path.join(process.cwd(), "data", "posts.json");
-}
-
-function ensureLoaded(): void {
-  if (loaded) return;
-  loaded = true;
-
-  const filePath = getPostsFilePath();
+async function readPosts(): Promise<BlogPost[]> {
+  const redis = await getRedisClient();
+  const raw = await redis.get(POSTS_KEY);
+  if (!raw) return [];
   try {
-    if (!fs.existsSync(filePath)) {
-      posts = [];
-      return;
-    }
-    const raw = fs.readFileSync(filePath, "utf8");
     const parsed = JSON.parse(raw);
-    posts = Array.isArray(parsed) ? (parsed as BlogPost[]) : [];
+    return Array.isArray(parsed) ? (parsed as BlogPost[]) : [];
   } catch {
-    posts = [];
+    return [];
   }
 }
 
-function persist(): void {
-  const filePath = getPostsFilePath();
-  try {
-    fs.mkdirSync(path.dirname(filePath), { recursive: true });
-    fs.writeFileSync(filePath, JSON.stringify(posts, null, 2), "utf8");
-  } catch {
-    // If filesystem is read-only (e.g. some serverless platforms), keep in-memory.
-  }
+async function writePosts(posts: BlogPost[]): Promise<void> {
+  const redis = await getRedisClient();
+  await redis.set(POSTS_KEY, JSON.stringify(posts));
 }
 
-export function getAllPosts(): BlogPost[] {
-  ensureLoaded();
+export async function getAllPosts(): Promise<BlogPost[]> {
+  const posts = await readPosts();
   return posts
     .filter((p) => p.published)
-    .slice()
     .sort(
       (a, b) =>
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
 }
 
-export function getAllPostsAdmin(): BlogPost[] {
-  ensureLoaded();
-  return posts
-    .slice()
-    .sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-    );
+export async function getAllPostsAdmin(): Promise<BlogPost[]> {
+  const posts = await readPosts();
+  return posts.sort(
+    (a, b) =>
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  ensureLoaded();
+export async function getPostBySlug(slug: string): Promise<BlogPost | undefined> {
+  const posts = await readPosts();
   return posts.find((p) => p.slug === slug && p.published);
 }
 
-export function getPostById(id: string): BlogPost | undefined {
-  ensureLoaded();
+export async function getPostById(id: string): Promise<BlogPost | undefined> {
+  const posts = await readPosts();
   return posts.find((p) => p.id === id);
 }
 
-export function addPost(post: BlogPost): void {
-  ensureLoaded();
+export async function addPost(post: BlogPost): Promise<void> {
+  const posts = await readPosts();
   posts.push(post);
-  persist();
+  await writePosts(posts);
 }
 
-export function updatePost(id: string, updates: Partial<BlogPost>): boolean {
-  ensureLoaded();
+export async function updatePost(
+  id: string,
+  updates: Partial<BlogPost>
+): Promise<boolean> {
+  const posts = await readPosts();
   const idx = posts.findIndex((p) => p.id === id);
   if (idx === -1) return false;
-  posts[idx] = { ...posts[idx], ...updates, updatedAt: new Date().toISOString() };
-  persist();
+  posts[idx] = {
+    ...posts[idx],
+    ...updates,
+    updatedAt: new Date().toISOString(),
+  };
+  await writePosts(posts);
   return true;
 }
 
-export function deletePost(id: string): boolean {
-  ensureLoaded();
-  const before = posts.length;
-  posts = posts.filter((p) => p.id !== id);
-  if (posts.length < before) persist();
-  return posts.length < before;
+export async function deletePost(id: string): Promise<boolean> {
+  const posts = await readPosts();
+  const filtered = posts.filter((p) => p.id !== id);
+  if (filtered.length === posts.length) return false;
+  await writePosts(filtered);
+  return true;
 }

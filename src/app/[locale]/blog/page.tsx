@@ -100,6 +100,7 @@ export default async function BlogPage({ params }: Props) {
                       src={posts[0].coverImage}
                       alt={posts[0].title[locale] || posts[0].title["en"] || ""}
                       fill
+                      unoptimized
                       sizes="(max-width: 1024px) 100vw, 1024px"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       priority
@@ -169,6 +170,7 @@ export default async function BlogPage({ params }: Props) {
                           src={post.coverImage}
                           alt={post.title[locale] || post.title["en"] || ""}
                           fill
+                          unoptimized
                           sizes="(max-width: 1024px) 50vw, 320px"
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />

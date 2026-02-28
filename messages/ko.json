@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "MeetingCost.team - 실시간 회의 비용 계산기",
+    "description": "회의의 실제 비용을 실시간으로 계산하세요. 참석자 시급을 기반으로 회의 비용을 추적하고 생산성을 향상시키세요."
+  },
+  "header": {
+    "title": "MeetingCost",
+    "tagline": "회의의 실제 비용을 확인하세요"
+  },
+  "form": {
+    "attendees_label": "참석자",
+    "name_label": "이름",
+    "name_placeholder": "이름 입력…",
+    "add_person": "다음 사람 추가",
+    "hourly_rate_label": "시급",
+    "hourly_rate_placeholder": "예: 30000",
+    "currency_label": "통화",
+    "start_button": "회의 시작",
+    "stop_button": "회의 중지",
+    "pause_button": "일시정지",
+    "resume_button": "계속",
+    "reset_button": "초기화"
+  },
+  "ticker": {
+    "total_cost": "회의 비용",
+    "per_second": "초당",
+    "attendees": "명 참석",
+    "elapsed": "경과 시간",
+    "hours": "시간",
+    "minutes": "분",
+    "seconds": "초"
+  },
+  "info": {
+    "how_it_works": "사용 방법",
+    "step1": "각 참석자의 이름, 시급, 통화를 입력하세요",
+    "step2": "+ 를 눌러 회의에 추가하세요",
+    "step3": "참석자마다 다른 시급과 통화를 설정할 수 있습니다",
+    "step4": "시작을 누르고 각 참석자의 비용이 실시간으로 증가하는 것을 확인하세요",
+    "why_title": "왜 회의 비용을 추적해야 할까요?",
+    "why_description": "회의는 모든 조직에서 가장 큰 숨겨진 비용 중 하나입니다. 실시간 비용을 시각화함으로써 팀은 회의의 필요성, 시간, 참석자에 대해 더 신중한 결정을 내릴 수 있습니다.",
+    "formula_title": "계산 공식",
+    "formula": "1인당: 비용 = 시급 ÷ 3,600 × 경과 초. 합계 = 전원의 합산."
+  },
+  "footer": {
+    "made_with": "회사의 비용 절감을 위해 제작되었습니다",
+    "copyright": "© 2026 MeetingCost.team. 모든 권리 보유."
+  },
+  "nav": {
+    "home": "홈",
+    "blog": "블로그",
+    "contact": "문의",
+    "policy": "이용약관",
+    "privacy": "개인정보"
+  },
+  "policy": {
+    "title": "이용약관",
+    "usage_title": "이용 규칙",
+    "usage_desc": "MeetingCost.team은 무료 실시간 회의 비용 계산 도구입니다. 개인 또는 상업적 목적으로 사용할 수 있습니다. 계산 결과를 기반으로 한 결정에 대해 당사는 책임을 지지 않습니다.",
+    "disclaimer_title": "면책 조항",
+    "disclaimer_desc": "이 도구는 어떠한 보증 없이 '있는 그대로' 제공됩니다. 계산 결과는 입력한 시급을 기반으로 한 추정치이며 재무 조언이 아닙니다.",
+    "changes_title": "약관 변경",
+    "changes_desc": "당사는 언제든지 이 약관을 수정할 권리를 보유합니다. 서비스의 지속적인 사용은 업데이트된 약관에 대한 동의를 의미합니다.",
+    "back_home": "홈으로 돌아가기"
+  },
+  "privacy": {
+    "title": "개인정보 처리방침",
+    "data_title": "데이터 수집",
+    "data_desc": "MeetingCost.team은 어떠한 개인 데이터도 수집, 저장 또는 전송하지 않습니다. 모든 계산은 브라우저에서 수행됩니다. 급여, 이름 또는 회의 데이터가 기기를 벗어나지 않습니다.",
+    "cookies_title": "쿠키",
+    "cookies_desc": "언어 설정을 위한 필수 쿠키만 사용합니다. 추적 쿠키나 분석 도구는 사용하지 않습니다.",
+    "third_party_title": "제3자 서비스",
+    "third_party_desc": "이 사이트는 제3자 분석, 광고 또는 추적 서비스와 통합되지 않습니다.",
+    "contact_title": "문의",
+    "contact_desc": "개인정보 보호에 대한 질문이 있으시면 contact@meetingcost.team으로 문의해 주세요.",
+    "back_home": "홈으로 돌아가기"
+  },
+  "contact": {
+    "title": "문의하기",
+    "intro": "질문, 피드백 또는 제안이 있으신가요? 언제든지 연락해 주세요.",
+    "email_label": "이메일",
+    "website_label": "웹사이트",
+    "response_time": "보통 24-48시간 이내에 답변드립니다.",
+    "back_home": "홈으로 돌아가기"
+  },
+  "blog": {
+    "title": "블로그",
+    "subtitle": "생산적인 회의를 위한 팁, 인사이트, 모범 사례.",
+    "loading": "기사 로딩 중...",
+    "no_posts": "아직 기사가 없습니다. 나중에 다시 확인해 주세요!",
+    "not_found": "기사를 찾을 수 없습니다",
+    "back_home": "홈으로 돌아가기",
+    "back_blog": "블로그로 돌아가기",
+    "read_more": "더 읽기"
+  },
+  "sessions": {
+    "my_sessions": "내 세션",
+    "saved_sessions": "저장된 세션",
+    "new_session": "새 세션",
+    "no_sessions": "저장된 세션이 없습니다",
+    "current": "현재",
+    "load": "불러오기",
+    "delete": "삭제",
+    "delete_confirm": "이 세션을 삭제하시겠습니까?",
+    "status_running": "진행 중",
+    "status_paused": "일시 정지",
+    "status_stopped": "종료",
+    "people": "명",
+    "just_now": "방금",
+    "minutes_ago": "{count}분 전",
+    "hours_ago": "{count}시간 전",
+    "days_ago": "{count}일 전",
+    "untitled_meeting": "제목 없는 회의",
+    "session_name_placeholder": "세션 이름...",
+    "auto_saved": "자동 저장됨"
+  },
+  "lang_switcher": {
+    "label": "언어"
+  }
+}

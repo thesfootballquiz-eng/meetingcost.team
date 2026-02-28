@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "MeetingCost.team - 实时会议成本计算器",
+    "description": "实时计算您的会议真正花费多少。根据参会者时薪追踪会议费用，提高生产力。"
+  },
+  "header": {
+    "title": "MeetingCost",
+    "tagline": "看看你的会议到底花了多少钱"
+  },
+  "form": {
+    "attendees_label": "参会人员",
+    "name_label": "姓名",
+    "name_placeholder": "输入姓名…",
+    "add_person": "添加下一位",
+    "hourly_rate_label": "时薪",
+    "hourly_rate_placeholder": "例如：200",
+    "currency_label": "货币",
+    "start_button": "开始会议",
+    "stop_button": "停止会议",
+    "pause_button": "暂停",
+    "resume_button": "继续",
+    "reset_button": "重置"
+  },
+  "ticker": {
+    "total_cost": "会议成本",
+    "per_second": "每秒",
+    "attendees": "名参会者",
+    "elapsed": "已用时间",
+    "hours": "时",
+    "minutes": "分",
+    "seconds": "秒"
+  },
+  "info": {
+    "how_it_works": "工作原理",
+    "step1": "输入每个人的姓名、时薪和货币",
+    "step2": "点击 + 添加到会议",
+    "step3": "每个人可以有不同的时薪和货币",
+    "step4": "点击开始，实时观看每个人的成本增长",
+    "why_title": "为什么要追踪会议成本？",
+    "why_description": "会议是任何组织中最大的隐性开支之一。通过可视化实时成本，团队可以更加自觉地决定会议的必要性、时长和参会人数。",
+    "formula_title": "计算公式",
+    "formula": "每人：成本 = 时薪 ÷ 3,600 × 已过秒数。总计 = 所有人的总和。"
+  },
+  "footer": {
+    "made_with": "为节省您的公司资金而构建",
+    "copyright": "© 2026 MeetingCost.team. 版权所有。"
+  },
+  "nav": {
+    "home": "首页",
+    "blog": "博客",
+    "contact": "联系我们",
+    "policy": "使用条款",
+    "privacy": "隐私政策"
+  },
+  "policy": {
+    "title": "使用条款",
+    "usage_title": "使用规范",
+    "usage_desc": "MeetingCost.team 是一款免费的实时会议成本计算工具。您可以将其用于个人或商业用途。我们不对基于计算结果做出的决策承担责任。",
+    "disclaimer_title": "免责声明",
+    "disclaimer_desc": "本工具按「原样」提供，不附带任何保证。计算结果是基于您提供的时薪的估算，不构成财务建议。",
+    "changes_title": "条款变更",
+    "changes_desc": "我们保留随时修改这些条款的权利。继续使用本服务即表示接受更新后的条款。",
+    "back_home": "返回首页"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "data_title": "数据收集",
+    "data_desc": "MeetingCost.team 不收集、存储或传输任何个人数据。所有计算完全在您的浏览器中执行。任何薪资、姓名或会议数据都不会离开您的设备。",
+    "cookies_title": "Cookies",
+    "cookies_desc": "我们仅使用必要的Cookie来保存语言偏好。本网站不使用跟踪Cookie或分析工具。",
+    "third_party_title": "第三方服务",
+    "third_party_desc": "本网站不集成任何第三方分析、广告或跟踪服务。",
+    "contact_title": "问题咨询",
+    "contact_desc": "如果您对我们的隐私做法有任何疑问，请联系 contact@meetingcost.team。",
+    "back_home": "返回首页"
+  },
+  "contact": {
+    "title": "联系我们",
+    "intro": "有问题、反馈或建议？我们很乐意听取您的意见。",
+    "email_label": "电子邮件",
+    "website_label": "网站",
+    "response_time": "我们通常在24-48小时内回复。",
+    "back_home": "返回首页"
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "关于高效会议的技巧、见解和最佳实践。",
+    "loading": "正在加载文章...",
+    "no_posts": "暂无文章，请稍后再来！",
+    "not_found": "文章未找到",
+    "back_home": "返回首页",
+    "back_blog": "返回博客",
+    "read_more": "阅读更多"
+  },
+  "sessions": {
+    "my_sessions": "我的会议",
+    "saved_sessions": "已保存的会议",
+    "new_session": "新会议",
+    "no_sessions": "暂无已保存的会议",
+    "current": "当前",
+    "load": "加载",
+    "delete": "删除",
+    "delete_confirm": "确定要删除此会议吗？",
+    "status_running": "进行中",
+    "status_paused": "已暂停",
+    "status_stopped": "已结束",
+    "people": "人",
+    "just_now": "刚刚",
+    "minutes_ago": "{count}分钟前",
+    "hours_ago": "{count}小时前",
+    "days_ago": "{count}天前",
+    "untitled_meeting": "未命名会议",
+    "session_name_placeholder": "会议名称...",
+    "auto_saved": "已自动保存"
+  },
+  "lang_switcher": {
+    "label": "语言"
+  }
+}

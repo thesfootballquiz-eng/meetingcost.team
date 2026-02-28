@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "MeetingCost.team - Real-Time Meeting Cost Calculator",
+    "description": "Calculate how much your meetings really cost in real-time. Track meeting expenses based on attendee hourly rates and improve productivity."
+  },
+  "header": {
+    "title": "MeetingCost",
+    "tagline": "See what your meetings really cost"
+  },
+  "form": {
+    "attendees_label": "Attendees",
+    "name_label": "Name",
+    "name_placeholder": "Enter a name…",
+    "add_person": "Add next person",
+    "hourly_rate_label": "Hourly Rate",
+    "hourly_rate_placeholder": "e.g. 50",
+    "currency_label": "Currency",
+    "start_button": "Start Meeting",
+    "stop_button": "Stop Meeting",
+    "pause_button": "Pause",
+    "resume_button": "Resume",
+    "reset_button": "Reset"
+  },
+  "ticker": {
+    "total_cost": "Meeting Cost",
+    "per_second": "per second",
+    "attendees": "attendees",
+    "elapsed": "Time Elapsed",
+    "hours": "h",
+    "minutes": "m",
+    "seconds": "s"
+  },
+  "info": {
+    "how_it_works": "How It Works",
+    "step1": "Enter name, hourly rate, and currency for each person",
+    "step2": "Click + to add them to the meeting",
+    "step3": "Each person can have a different rate and currency",
+    "step4": "Hit Start and watch each person's cost tick up in real-time",
+    "why_title": "Why Track Meeting Costs?",
+    "why_description": "Meetings are one of the largest hidden expenses in any organization. By visualizing the real-time cost, teams can make more conscious decisions about meeting necessity, duration, and attendance.",
+    "formula_title": "The Formula",
+    "formula": "Per Person: Cost = Hourly Rate ÷ 3,600 × Seconds Elapsed. Total = Sum of all."
+  },
+  "footer": {
+    "made_with": "Built to save your company money",
+    "copyright": "© 2026 MeetingCost.team. All rights reserved."
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "contact": "Contact",
+    "policy": "Terms of Use",
+    "privacy": "Privacy"
+  },
+  "policy": {
+    "title": "Terms of Use",
+    "usage_title": "Acceptable Use",
+    "usage_desc": "MeetingCost.team is a free online tool for calculating real-time meeting costs. You may use this tool for personal or commercial purposes. We are not responsible for decisions made based on the calculations provided.",
+    "disclaimer_title": "Disclaimer",
+    "disclaimer_desc": "This tool is provided \"as is\" without warranty of any kind. The calculations are estimates based on the hourly rates you provide and do not constitute financial advice.",
+    "changes_title": "Changes to Terms",
+    "changes_desc": "We reserve the right to modify these terms at any time. Continued use of the service constitutes acceptance of updated terms.",
+    "back_home": "Back to Home"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "data_title": "Data Collection",
+    "data_desc": "MeetingCost.team does not collect, store, or transmit any personal data. All meeting calculations are performed entirely in your browser. No salary, name, or meeting data ever leaves your device.",
+    "cookies_title": "Cookies",
+    "cookies_desc": "We use only essential cookies for language preferences. No tracking cookies or analytics are used on this site.",
+    "third_party_title": "Third-Party Services",
+    "third_party_desc": "This site does not integrate with any third-party analytics, advertising, or tracking services.",
+    "contact_title": "Questions",
+    "contact_desc": "If you have any questions about our privacy practices, please contact us at contact@meetingcost.team.",
+    "back_home": "Back to Home"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Have questions, feedback, or suggestions? We'd love to hear from you.",
+    "email_label": "Email",
+    "website_label": "Website",
+    "response_time": "We typically respond within 24-48 hours.",
+    "back_home": "Back to Home"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tips, insights, and best practices for productive meetings.",
+    "loading": "Loading articles...",
+    "no_posts": "No articles yet. Check back soon!",
+    "not_found": "Article not found",
+    "back_home": "Back to Home",
+    "back_blog": "Back to Blog",
+    "read_more": "Read more"
+  },
+  "sessions": {
+    "my_sessions": "My Sessions",
+    "saved_sessions": "Saved Sessions",
+    "new_session": "New Session",
+    "no_sessions": "No saved sessions yet",
+    "current": "Current",
+    "load": "Load",
+    "delete": "Delete",
+    "delete_confirm": "Are you sure you want to delete this session?",
+    "status_running": "Running",
+    "status_paused": "Paused",
+    "status_stopped": "Stopped",
+    "people": "people",
+    "just_now": "Just now",
+    "minutes_ago": "{count}m ago",
+    "hours_ago": "{count}h ago",
+    "days_ago": "{count}d ago",
+    "untitled_meeting": "Untitled meeting",
+    "session_name_placeholder": "Session name...",
+    "auto_saved": "Auto-saved"
+  },
+  "lang_switcher": {
+    "label": "Language"
+  }
+}

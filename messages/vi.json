@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "MeetingCost.team - Tính Chi Phí Họp Thời Gian Thực",
+    "description": "Tính toán chi phí thực sự của các cuộc họp theo thời gian thực. Theo dõi chi phí họp dựa trên mức lương theo giờ và cải thiện năng suất."
+  },
+  "header": {
+    "title": "MeetingCost",
+    "tagline": "Xem cuộc họp của bạn tốn bao nhiêu"
+  },
+  "form": {
+    "attendees_label": "Người tham gia",
+    "name_label": "Tên",
+    "name_placeholder": "Nhập tên…",
+    "add_person": "Thêm người tiếp theo",
+    "hourly_rate_label": "Lương theo giờ",
+    "hourly_rate_placeholder": "VD: 30000",
+    "currency_label": "Đơn vị tiền tệ",
+    "start_button": "Bắt đầu họp",
+    "stop_button": "Dừng họp",
+    "pause_button": "Tạm dừng",
+    "resume_button": "Tiếp tục",
+    "reset_button": "Đặt lại"
+  },
+  "ticker": {
+    "total_cost": "Chi phí cuộc họp",
+    "per_second": "mỗi giây",
+    "attendees": "người tham gia",
+    "elapsed": "Thời gian đã trôi",
+    "hours": "g",
+    "minutes": "p",
+    "seconds": "s"
+  },
+  "info": {
+    "how_it_works": "Cách hoạt động",
+    "step1": "Nhập tên, lương giờ và đơn vị tiền cho mỗi người",
+    "step2": "Nhấn + để thêm vào cuộc họp",
+    "step3": "Mỗi người có thể có mức lương và tiền tệ khác nhau",
+    "step4": "Nhấn Bắt đầu và xem chi phí từng người tăng theo thời gian thực",
+    "why_title": "Tại sao cần theo dõi chi phí họp?",
+    "why_description": "Các cuộc họp là một trong những chi phí ẩn lớn nhất trong mọi tổ chức. Bằng cách trực quan hóa chi phí thời gian thực, các nhóm có thể đưa ra quyết định có ý thức hơn về sự cần thiết, thời lượng và số người tham dự cuộc họp.",
+    "formula_title": "Công thức tính",
+    "formula": "Mỗi người: Chi phí = Lương giờ ÷ 3.600 × Số giây. Tổng = Cộng dồn tất cả."
+  },
+  "footer": {
+    "made_with": "Được xây dựng để tiết kiệm tiền cho công ty bạn",
+    "copyright": "© 2026 MeetingCost.team. Bảo lưu mọi quyền."
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "policy": "Điều khoản",
+    "privacy": "Bảo mật"
+  },
+  "policy": {
+    "title": "Điều khoản sử dụng",
+    "usage_title": "Cách sử dụng",
+    "usage_desc": "MeetingCost.team là công cụ miễn phí tính chi phí cuộc họp theo thời gian thực. Bạn có thể sử dụng cho mục đích cá nhân hoặc thương mại. Chúng tôi không chịu trách nhiệm cho các quyết định dựa trên kết quả tính toán.",
+    "disclaimer_title": "Miễn trừ trách nhiệm",
+    "disclaimer_desc": "Công cụ này được cung cấp \"nguyên trạng\" không có bảo hành. Kết quả tính toán là ước tính dựa trên mức lương giờ bạn nhập và không phải là tư vấn tài chính.",
+    "changes_title": "Thay đổi điều khoản",
+    "changes_desc": "Chúng tôi có quyền thay đổi điều khoản bất kỳ lúc nào. Việc tiếp tục sử dụng dịch vụ đồng nghĩa với việc chấp nhận điều khoản mới.",
+    "back_home": "Về trang chủ"
+  },
+  "privacy": {
+    "title": "Chính sách bảo mật",
+    "data_title": "Thu thập dữ liệu",
+    "data_desc": "MeetingCost.team không thu thập, lưu trữ hay truyền bất kỳ dữ liệu cá nhân nào. Mọi tính toán đều thực hiện trên trình duyệt của bạn. Không có dữ liệu lương, tên hay cuộc họp nào rời khỏi thiết bị của bạn.",
+    "cookies_title": "Cookies",
+    "cookies_desc": "Chúng tôi chỉ sử dụng cookie thiết yếu cho tùy chọn ngôn ngữ. Không sử dụng cookie theo dõi hay phân tích.",
+    "third_party_title": "Dịch vụ bên thứ ba",
+    "third_party_desc": "Trang web này không tích hợp với bất kỳ dịch vụ phân tích, quảng cáo hay theo dõi bên thứ ba nào.",
+    "contact_title": "Câu hỏi",
+    "contact_desc": "Nếu bạn có câu hỏi về chính sách bảo mật, vui lòng liên hệ contact@meetingcost.team.",
+    "back_home": "Về trang chủ"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "intro": "Có câu hỏi, góp ý hoặc đề xuất? Chúng tôi rất muốn nghe từ bạn.",
+    "email_label": "Email",
+    "website_label": "Website",
+    "response_time": "Chúng tôi thường phản hồi trong vòng 24-48 giờ.",
+    "back_home": "Về trang chủ"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Mẹo, kiến thức và phương pháp tốt nhất cho cuộc họp hiệu quả.",
+    "loading": "Đang tải bài viết...",
+    "no_posts": "Chưa có bài viết nào. Hãy quay lại sau!",
+    "not_found": "Không tìm thấy bài viết",
+    "back_home": "Về trang chủ",
+    "back_blog": "Về Blog",
+    "read_more": "Đọc tiếp"
+  },
+  "sessions": {
+    "my_sessions": "Phiên của tôi",
+    "saved_sessions": "Phiên đã lưu",
+    "new_session": "Phiên mới",
+    "no_sessions": "Chưa có phiên nào được lưu",
+    "current": "Hiện tại",
+    "load": "Tải",
+    "delete": "Xóa",
+    "delete_confirm": "Bạn có chắc muốn xóa phiên này?",
+    "status_running": "Đang chạy",
+    "status_paused": "Tạm dừng",
+    "status_stopped": "Đã dừng",
+    "people": "người",
+    "just_now": "Vừa xong",
+    "minutes_ago": "{count} phút trước",
+    "hours_ago": "{count} giờ trước",
+    "days_ago": "{count} ngày trước",
+    "untitled_meeting": "Cuộc họp chưa đặt tên",
+    "session_name_placeholder": "Tên phiên họp...",
+    "auto_saved": "Tự động lưu"
+  },
+  "lang_switcher": {
+    "label": "Ngôn ngữ"
+  }
+}

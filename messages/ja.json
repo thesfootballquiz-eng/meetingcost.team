@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "MeetingCost.team - リアルタイム会議コスト計算ツール",
+    "description": "会議の本当のコストをリアルタイムで計算。参加者の時給に基づいて会議費用を追跡し、生産性を向上させましょう。"
+  },
+  "header": {
+    "title": "MeetingCost",
+    "tagline": "会議の本当のコストを見える化"
+  },
+  "form": {
+    "attendees_label": "参加者",
+    "name_label": "名前",
+    "name_placeholder": "名前を入力…",
+    "add_person": "次の人を追加",
+    "hourly_rate_label": "時給",
+    "hourly_rate_placeholder": "例：3000",
+    "currency_label": "通貨",
+    "start_button": "会議を開始",
+    "stop_button": "会議を停止",
+    "pause_button": "一時停止",
+    "resume_button": "再開",
+    "reset_button": "リセット"
+  },
+  "ticker": {
+    "total_cost": "会議コスト",
+    "per_second": "毎秒",
+    "attendees": "名参加",
+    "elapsed": "経過時間",
+    "hours": "時間",
+    "minutes": "分",
+    "seconds": "秒"
+  },
+  "info": {
+    "how_it_works": "使い方",
+    "step1": "各参加者の名前、時給、通貨を入力",
+    "step2": "+ をクリックして会議に追加",
+    "step3": "参加者ごとに異なる時給と通貨を設定可能",
+    "step4": "開始をクリックして各参加者のコストをリアルタイムで確認",
+    "why_title": "なぜ会議コストを追跡するのか？",
+    "why_description": "会議はあらゆる組織における最大の隠れたコストの一つです。リアルタイムのコストを可視化することで、チームは会議の必要性、時間、参加者について、より意識的な判断ができるようになります。",
+    "formula_title": "計算式",
+    "formula": "1人あたり：コスト = 時給 ÷ 3,600 × 経過秒数。合計 = 全員の合算。"
+  },
+  "footer": {
+    "made_with": "企業のコスト削減のために開発",
+    "copyright": "© 2026 MeetingCost.team. 全著作権所有。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "blog": "ブログ",
+    "contact": "お問い合わせ",
+    "policy": "利用規約",
+    "privacy": "プライバシー"
+  },
+  "policy": {
+    "title": "利用規約",
+    "usage_title": "利用について",
+    "usage_desc": "MeetingCost.team は無料のリアルタイム会議コスト計算ツールです。個人または商用目的でご利用いただけます。計算結果に基づく判断については当方は責任を負いません。",
+    "disclaimer_title": "免責事項",
+    "disclaimer_desc": "本ツールは一切の保証なく「現状のまま」提供されます。計算結果はご入力いただいた時給に基づく推定値であり、財務アドバイスではありません。",
+    "changes_title": "規約の変更",
+    "changes_desc": "当方はいつでもこれらの規約を変更する権利を保有します。サービスの継続的な利用は、更新された規約への同意を意味します。",
+    "back_home": "ホームに戻る"
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "data_title": "データ収集",
+    "data_desc": "MeetingCost.team は個人データの収集、保存、送信を一切行いません。すべての計算はブラウザ内で完結します。給与、名前、会議データがデバイスから外部に送信されることはありません。",
+    "cookies_title": "Cookie",
+    "cookies_desc": "言語設定のための必要最小限のCookieのみ使用しています。トラッキングCookieや分析ツールは使用していません。",
+    "third_party_title": "第三者サービス",
+    "third_party_desc": "本サイトは第三者の分析、広告、トラッキングサービスと一切連携していません。",
+    "contact_title": "ご質問",
+    "contact_desc": "プライバシーに関するご質問は contact@meetingcost.team までお問い合わせください。",
+    "back_home": "ホームに戻る"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "intro": "ご質問、フィードバック、ご提案がありましたらお気軽にどうぞ。",
+    "email_label": "メール",
+    "website_label": "ウェブサイト",
+    "response_time": "通常24〜48時間以内にご返信いたします。",
+    "back_home": "ホームに戻る"
+  },
+  "blog": {
+    "title": "ブログ",
+    "subtitle": "生産的な会議のためのヒント、洞察、ベストプラクティス。",
+    "loading": "記事を読み込み中...",
+    "no_posts": "まだ記事がありません。後でもう一度お越しください！",
+    "not_found": "記事が見つかりません",
+    "back_home": "ホームに戻る",
+    "back_blog": "ブログに戻る",
+    "read_more": "続きを読む"
+  },
+  "sessions": {
+    "my_sessions": "マイセッション",
+    "saved_sessions": "保存済みセッション",
+    "new_session": "新しいセッション",
+    "no_sessions": "保存済みセッションはありません",
+    "current": "現在",
+    "load": "読み込む",
+    "delete": "削除",
+    "delete_confirm": "このセッションを削除しますか？",
+    "status_running": "進行中",
+    "status_paused": "一時停止",
+    "status_stopped": "終了",
+    "people": "人",
+    "just_now": "たった今",
+    "minutes_ago": "{count}分前",
+    "hours_ago": "{count}時間前",
+    "days_ago": "{count}日前",
+    "untitled_meeting": "無題の会議",
+    "session_name_placeholder": "セッション名...",
+    "auto_saved": "自動保存済み"
+  },
+  "lang_switcher": {
+    "label": "言語"
+  }
+}

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Utility scripts (plain CJS, not part of app bundle)
+    "generate-favicon.js",
   ]),
 ]);
 

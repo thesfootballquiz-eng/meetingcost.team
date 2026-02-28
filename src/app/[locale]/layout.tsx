@@ -48,10 +48,6 @@ export async function generateMetadata({
     title: messages.metadata.title,
     description: messages.metadata.description,
     metadataBase: new URL(baseUrl),
-    icons: {
-      icon: [{ url: "/favicon.ico" }],
-      shortcut: ["/favicon.ico"],
-    },
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages,

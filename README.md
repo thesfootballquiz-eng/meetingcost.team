@@ -32,6 +32,42 @@ Posts created/edited in the admin panel are persisted to `data/posts.json` on th
 
 Note: Some serverless platforms have a read-only or ephemeral filesystem, in which case posts may not persist across deploys/restarts.
 
+## Deploy (Vercel + Cloudflare)
+
+This project is a Next.js App Router app (includes API routes), so the easiest production deploy is Vercel.
+
+### 1) Deploy from GitHub
+
+1. Go to Vercel and create a new Project.
+2. Import the GitHub repo.
+3. Build settings:
+	- Framework: Next.js (auto-detected)
+	- Build command: `npm run build`
+	- Output: default
+
+### 2) Set required environment variables
+
+In Vercel Project → Settings → Environment Variables, set:
+
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD`
+- `SESSION_SECRET`
+
+Then redeploy.
+
+### 3) Connect your domain (Cloudflare DNS)
+
+1. In Vercel Project → Settings → Domains, add `meetingcost.team` (and optionally `www.meetingcost.team`).
+2. Vercel will show the exact DNS records required.
+3. In Cloudflare DNS, create exactly those records (type/name/value) and wait for verification.
+
+Tip: Prefer copying the records from Vercel instead of using hard-coded values, since they can differ by setup.
+
+### Note about blog persistence on serverless
+
+If you deploy on Vercel (serverless), writing `data/posts.json` may not persist reliably across deploys/restarts.
+For a production blog CMS, use a real database/storage (or deploy to a VPS where the filesystem is persistent).
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

@@ -1,13 +1,34 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import MeetingCalculator from "@/components/MeetingCalculator";
 
-export default function HomePage() {
-  const t = useTranslations();
+const baseUrl = "https://meetingcost.team";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "MeetingCost.team",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "All",
+    description: t("metadata.description"),
+    url: `${baseUrl}/${locale}`,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    featureList:
+      "Real-time meeting cost tracking, Multi-currency support, Per-person cost breakdown",
+  };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 sm:py-12">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="max-w-4xl mx-auto px-4 py-8 sm:py-12">
       {/* Hero Section */}
       <section className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
@@ -66,5 +87,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

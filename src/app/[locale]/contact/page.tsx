@@ -1,10 +1,37 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
-export default function ContactPage() {
-  const t = useTranslations("contact");
+const baseUrl = "https://meetingcost.team";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
+  const languages: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    languages[loc] = `${baseUrl}/${loc}/contact`;
+  }
+  languages["x-default"] = `${baseUrl}/en/contact`;
+  return {
+    title: `${t("title")} | MeetingCost.team`,
+    description: t("intro"),
+    alternates: { canonical: `${baseUrl}/${locale}/contact`, languages },
+    openGraph: {
+      title: `${t("title")} | MeetingCost.team`,
+      description: t("intro"),
+      url: `${baseUrl}/${locale}/contact`,
+      siteName: "MeetingCost.team",
+      type: "website",
+    },
+  };
+}
+
+export default async function ContactPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
   const contactEmail = "meetingcost.team@gmail.com";
 
   return (

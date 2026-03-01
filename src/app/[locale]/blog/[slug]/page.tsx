@@ -86,6 +86,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
+  const nav = await getTranslations({ locale, namespace: "nav" });
 
   const post = (await getPostBySlug(slug)) as unknown as BlogPostFull | undefined;
   if (!post) notFound();
@@ -141,9 +142,9 @@ export default async function BlogPostPage({ params }: Props) {
       <article className="max-w-4xl mx-auto px-4 py-8">
         {/* Breadcrumb Nav */}
         <nav className="mb-6 flex items-center gap-2 text-sm text-gray-500">
-          <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-emerald-400 transition-colors">{nav("home")}</Link>
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-          <Link href="/blog" className="hover:text-emerald-400 transition-colors">Blog</Link>
+          <Link href="/blog" className="hover:text-emerald-400 transition-colors">{nav("blog")}</Link>
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
           <span className="text-gray-400 truncate max-w-[200px]">{title}</span>
         </nav>
@@ -209,7 +210,7 @@ export default async function BlogPostPage({ params }: Props) {
                   </time>
                   {post.updatedAt !== post.createdAt && (
                     <span className="ml-2 text-gray-600">
-                      (cập nhật: {new Date(post.updatedAt).toLocaleDateString(locale, {
+                      ({t("updated")}: {new Date(post.updatedAt).toLocaleDateString(locale, {
                         year: "numeric",
                         month: "short",
                         day: "numeric",

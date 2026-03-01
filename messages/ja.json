@@ -67,9 +67,9 @@
     "data_title": "データ収集",
     "data_desc": "MeetingCost.team は個人データの収集、保存、送信を一切行いません。すべての計算はブラウザ内で完結します。給与、名前、会議データがデバイスから外部に送信されることはありません。",
     "cookies_title": "Cookie",
-    "cookies_desc": "言語設定のための必要最小限のCookieのみ使用しています。トラッキングCookieや分析ツールは使用していません。",
+    "cookies_desc": "言語設定のための必要最小限のCookieを使用しています。本サイトはGoogle AdSenseも使用しており、広告のパーソナライズにCookieが設定される場合があります。詳細はGoogleのプライバシーポリシーをご覧ください。",
     "third_party_title": "第三者サービス",
-    "third_party_desc": "本サイトは第三者の分析、広告、トラッキングサービスと一切連携していません。",
+    "third_party_desc": "本サイトはGoogle AdSenseを使用して広告を表示しています。Googleはお客様の興味に基づく広告配信のためCookieを使用する場合があります。adssettings.google.comで設定を管理できます。",
     "contact_title": "ご質問",
     "contact_desc": "プライバシーに関するご質問は meetingcost.team@gmail.com までお問い合わせください。",
     "back_home": "ホームに戻る"
@@ -90,7 +90,8 @@
     "not_found": "記事が見つかりません",
     "back_home": "ホームに戻る",
     "back_blog": "ブログに戻る",
-    "read_more": "続きを読む"
+    "read_more": "続きを読む",
+    "updated": "更新"
   },
   "sessions": {
     "my_sessions": "マイセッション",

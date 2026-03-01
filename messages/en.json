@@ -67,9 +67,9 @@
     "data_title": "Data Collection",
     "data_desc": "MeetingCost.team does not collect, store, or transmit any personal data. All meeting calculations are performed entirely in your browser. No salary, name, or meeting data ever leaves your device.",
     "cookies_title": "Cookies",
-    "cookies_desc": "We use only essential cookies for language preferences. No tracking cookies or analytics are used on this site.",
+    "cookies_desc": "We use essential cookies for language preferences. This site also uses Google AdSense, which may set cookies for ad personalization. See Google's Privacy Policy for details.",
     "third_party_title": "Third-Party Services",
-    "third_party_desc": "This site does not integrate with any third-party analytics, advertising, or tracking services.",
+    "third_party_desc": "This site uses Google AdSense to display advertisements. Google may use cookies to serve ads based on your interests. You can opt out via Google's Ad Settings at adssettings.google.com.",
     "contact_title": "Questions",
     "contact_desc": "If you have any questions about our privacy practices, please contact us at meetingcost.team@gmail.com.",
     "back_home": "Back to Home"
@@ -90,7 +90,8 @@
     "not_found": "Article not found",
     "back_home": "Back to Home",
     "back_blog": "Back to Blog",
-    "read_more": "Read more"
+    "read_more": "Read more",
+    "updated": "Updated"
   },
   "sessions": {
     "my_sessions": "My Sessions",

@@ -67,9 +67,9 @@
     "data_title": "数据收集",
     "data_desc": "MeetingCost.team 不收集、存储或传输任何个人数据。所有计算完全在您的浏览器中执行。任何薪资、姓名或会议数据都不会离开您的设备。",
     "cookies_title": "Cookies",
-    "cookies_desc": "我们仅使用必要的Cookie来保存语言偏好。本网站不使用跟踪Cookie或分析工具。",
+    "cookies_desc": "我们使用必要的Cookie保存语言偏好。本网站还使用Google AdSense，可能设置Cookie用于广告个性化。详情请查阅Google隐私政策。",
     "third_party_title": "第三方服务",
-    "third_party_desc": "本网站不集成任何第三方分析、广告或跟踪服务。",
+    "third_party_desc": "本网站使用Google AdSense展示广告。Google可能使用Cookie根据您的兴趣投放广告，您可通过adssettings.google.com管理偏好。",
     "contact_title": "问题咨询",
     "contact_desc": "如果您对我们的隐私做法有任何疑问，请联系 meetingcost.team@gmail.com。",
     "back_home": "返回首页"
@@ -90,7 +90,8 @@
     "not_found": "文章未找到",
     "back_home": "返回首页",
     "back_blog": "返回博客",
-    "read_more": "阅读更多"
+    "read_more": "阅读更多",
+    "updated": "更新于"
   },
   "sessions": {
     "my_sessions": "我的会议",

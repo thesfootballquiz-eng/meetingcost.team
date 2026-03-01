@@ -67,9 +67,9 @@
     "data_title": "Thu thập dữ liệu",
     "data_desc": "MeetingCost.team không thu thập, lưu trữ hay truyền bất kỳ dữ liệu cá nhân nào. Mọi tính toán đều thực hiện trên trình duyệt của bạn. Không có dữ liệu lương, tên hay cuộc họp nào rời khỏi thiết bị của bạn.",
     "cookies_title": "Cookies",
-    "cookies_desc": "Chúng tôi chỉ sử dụng cookie thiết yếu cho tùy chọn ngôn ngữ. Không sử dụng cookie theo dõi hay phân tích.",
+    "cookies_desc": "Chúng tôi sử dụng cookie thiết yếu cho tùy chọn ngôn ngữ. Trang này cũng dùng Google AdSense, có thể đặt cookie để phục vụ quảng cáo. Xem Chính sách Bảo mật của Google để biết thêm.",
     "third_party_title": "Dịch vụ bên thứ ba",
-    "third_party_desc": "Trang web này không tích hợp với bất kỳ dịch vụ phân tích, quảng cáo hay theo dõi bên thứ ba nào.",
+    "third_party_desc": "Trang web này sử dụng Google AdSense để hiển thị quảng cáo. Google có thể dùng cookie để phục vụ quảng cáo phù hợp sở thích của bạn. Bạn có thể từ chối tại adssettings.google.com.",
     "contact_title": "Câu hỏi",
     "contact_desc": "Nếu bạn có câu hỏi về chính sách bảo mật, vui lòng liên hệ meetingcost.team@gmail.com.",
     "back_home": "Về trang chủ"
@@ -90,7 +90,8 @@
     "not_found": "Không tìm thấy bài viết",
     "back_home": "Về trang chủ",
     "back_blog": "Về Blog",
-    "read_more": "Đọc tiếp"
+    "read_more": "Đọc tiếp",
+    "updated": "Cập nhật"
   },
   "sessions": {
     "my_sessions": "Phiên của tôi",

@@ -1,10 +1,37 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
-export default function PrivacyPage() {
-  const t = useTranslations("privacy");
+const baseUrl = "https://meetingcost.team";
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
+  const languages: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    languages[loc] = `${baseUrl}/${loc}/privacy`;
+  }
+  languages["x-default"] = `${baseUrl}/en/privacy`;
+  return {
+    title: `${t("title")} | MeetingCost.team`,
+    description: t("data_desc"),
+    alternates: { canonical: `${baseUrl}/${locale}/privacy`, languages },
+    openGraph: {
+      title: `${t("title")} | MeetingCost.team`,
+      description: t("data_desc"),
+      url: `${baseUrl}/${locale}/privacy`,
+      siteName: "MeetingCost.team",
+      type: "website",
+    },
+  };
+}
+
+export default async function PrivacyPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">

@@ -91,7 +91,10 @@
     "back_home": "Về trang chủ",
     "back_blog": "Về Blog",
     "read_more": "Đọc tiếp",
-    "updated": "Cập nhật"
+    "updated": "Cập nhật",
+    "share": "Chia sẻ",
+    "copied": "Đã sao chép!",
+    "page_not_found": "Không tìm thấy trang"
   },
   "sessions": {
     "my_sessions": "Phiên của tôi",

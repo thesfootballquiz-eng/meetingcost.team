@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 export default function ShareButtons({
   title,
   url,
@@ -7,16 +9,18 @@ export default function ShareButtons({
   title: string;
   url: string;
 }) {
+  const t = useTranslations("blog");
+
   return (
     <div className="flex items-center gap-3 mb-8">
-      <span className="text-gray-500 text-sm font-medium">Share:</span>
+      <span className="text-gray-500 text-sm font-medium">{t("share")}:</span>
       <button
         onClick={() => {
           if (navigator.share) {
             navigator.share({ title, url });
           } else {
             navigator.clipboard.writeText(url);
-            alert("Đã copy link!");
+            alert(t("copied"));
           }
         }}
         className="w-9 h-9 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-400 hover:text-white transition-colors"

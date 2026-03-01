@@ -91,7 +91,10 @@
     "back_home": "होम पर वापस",
     "back_blog": "ब्लॉग पर वापस",
     "read_more": "और पढ़ें",
-    "updated": "अपडेट किया गया"
+    "updated": "अपडेट किया गया",
+    "share": "शेयर करें",
+    "copied": "कॉपी हो गया!",
+    "page_not_found": "पृष्ठ नहीं मिला"
   },
   "sessions": {
     "my_sessions": "मेरे सत्र",

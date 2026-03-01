@@ -91,7 +91,10 @@
     "back_home": "На главную",
     "back_blog": "Назад в блог",
     "read_more": "Читать далее",
-    "updated": "Обновлено"
+    "updated": "Обновлено",
+    "share": "Поделиться",
+    "copied": "Скопировано!",
+    "page_not_found": "Страница не найдена"
   },
   "sessions": {
     "my_sessions": "Мои сессии",

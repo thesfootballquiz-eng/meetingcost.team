@@ -91,7 +91,10 @@
     "back_home": "Back to Home",
     "back_blog": "Back to Blog",
     "read_more": "Read more",
-    "updated": "Updated"
+    "updated": "Updated",
+    "share": "Share",
+    "copied": "Copied!",
+    "page_not_found": "Page not found"
   },
   "sessions": {
     "my_sessions": "My Sessions",

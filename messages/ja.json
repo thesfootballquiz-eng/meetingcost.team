@@ -91,7 +91,10 @@
     "back_home": "ホームに戻る",
     "back_blog": "ブログに戻る",
     "read_more": "続きを読む",
-    "updated": "更新"
+    "updated": "更新",
+    "share": "シェア",
+    "copied": "コピーしました！",
+    "page_not_found": "ページが見つかりません"
   },
   "sessions": {
     "my_sessions": "マイセッション",

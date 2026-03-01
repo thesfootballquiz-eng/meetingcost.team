@@ -91,7 +91,10 @@
     "back_home": "返回首页",
     "back_blog": "返回博客",
     "read_more": "阅读更多",
-    "updated": "更新于"
+    "updated": "更新于",
+    "share": "分享",
+    "copied": "已复制！",
+    "page_not_found": "页面未找到"
   },
   "sessions": {
     "my_sessions": "我的会议",

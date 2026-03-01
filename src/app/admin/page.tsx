@@ -7,6 +7,7 @@ import Image from "next/image";
 interface BlogPost {
   id: string;
   slug: string;
+  slugs?: Record<string, string>;
   title: Record<string, string>;
   excerpt: Record<string, string>;
   content: Record<string, string>;
@@ -83,6 +84,7 @@ export default function AdminPage() {
     const blank: BlogPost = {
       id: "",
       slug: "",
+      slugs: {},
       title: { en: "", vi: "" },
       excerpt: { en: "", vi: "" },
       content: { en: "", vi: "" },
@@ -252,10 +254,10 @@ export default function AdminPage() {
         </div>
 
         <div className="space-y-6">
-          {/* Slug */}
+          {/* Slug (primary / fallback) */}
           <div>
             <label className="block text-sm text-gray-400 mb-1">
-              Slug (URL)
+              Slug chính (fallback)
             </label>
             <div className="flex gap-2">
               <input
@@ -280,6 +282,7 @@ export default function AdminPage() {
                 Tạo từ tiêu đề
               </button>
             </div>
+            <p className="text-xs text-gray-600 mt-1">Slug mặc định khi ngôn ngữ không có slug riêng</p>
           </div>
 
           {/* Author */}
@@ -377,6 +380,48 @@ export default function AdminPage() {
                 </h3>
 
                 <div className="space-y-4">
+                  {/* Per-locale slug */}
+                  <div>
+                    <label className="block text-sm text-gray-400 mb-1">
+                      Slug ({loc})
+                    </label>
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={editingPost.slugs?.[loc] || ""}
+                        onChange={(e) =>
+                          setEditingPost({
+                            ...editingPost,
+                            slugs: {
+                              ...(editingPost.slugs || {}),
+                              [loc]: e.target.value,
+                            },
+                          })
+                        }
+                        placeholder={editingPost.slug || "Để trống = dùng slug chính"}
+                        className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const titleForSlug = editingPost.title[loc] || "";
+                          if (titleForSlug) {
+                            setEditingPost({
+                              ...editingPost,
+                              slugs: {
+                                ...(editingPost.slugs || {}),
+                                [loc]: generateSlug(titleForSlug),
+                              },
+                            });
+                          }
+                        }}
+                        className="px-3 py-3 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-xl text-xs transition-colors whitespace-nowrap"
+                      >
+                        Tạo
+                      </button>
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-sm text-gray-400 mb-1">
                       Tiêu đề ({loc})

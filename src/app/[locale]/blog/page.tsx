@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts, getSlugForLocale } from "@/lib/posts";
 import Image from "next/image";
 
 const baseUrl = "https://meetingcost.team";
@@ -12,6 +12,7 @@ export const dynamic = "force-dynamic";
 interface BlogPostPreview {
   id: string;
   slug: string;
+  slugs?: Record<string, string>;
   title: Record<string, string>;
   excerpt: Record<string, string>;
   coverImage?: string;
@@ -90,7 +91,7 @@ export default async function BlogPage({ params }: Props) {
           {/* Featured Post (first post) */}
           {posts.length > 0 && (
             <Link
-              href={`/blog/${posts[0].slug}`}
+              href={`/blog/${getSlugForLocale(posts[0] as any, locale)}`}
               className="block mb-10 group"
             >
               <article className="relative overflow-hidden rounded-3xl border border-gray-800 hover:border-emerald-500/40 transition-all duration-300 bg-gray-900/50">
@@ -160,7 +161,7 @@ export default async function BlogPage({ params }: Props) {
               {posts.slice(1).map((post) => (
                 <Link
                   key={post.id}
-                  href={`/blog/${post.slug}`}
+                  href={`/blog/${getSlugForLocale(post as any, locale)}`}
                   className="group block"
                 >
                   <article className="h-full overflow-hidden rounded-2xl border border-gray-800 hover:border-emerald-500/40 transition-all duration-300 bg-gray-900/50 flex flex-col">

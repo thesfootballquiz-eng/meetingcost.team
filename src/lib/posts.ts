@@ -3,6 +3,7 @@ import { getRedisClient } from "./redis";
 export interface BlogPost {
   id: string;
   slug: string;
+  slugs?: Record<string, string>;
   title: Record<string, string>;
   excerpt: Record<string, string>;
   content: Record<string, string>;
@@ -12,6 +13,11 @@ export interface BlogPost {
   published: boolean;
   createdAt: string;
   updatedAt: string;
+}
+
+/** Get the best slug for a given locale (falls back to post.slug) */
+export function getSlugForLocale(post: { slug: string; slugs?: Record<string, string> }, locale: string): string {
+  return post.slugs?.[locale] || post.slug;
 }
 
 const POSTS_KEY = "blog:posts";
@@ -51,9 +57,17 @@ export async function getAllPostsAdmin(): Promise<BlogPost[]> {
   );
 }
 
-export async function getPostBySlug(slug: string): Promise<BlogPost | undefined> {
+export async function getPostBySlug(slug: string, locale?: string): Promise<BlogPost | undefined> {
   const posts = await readPosts();
-  return posts.find((p) => p.slug === slug && p.published);
+  return posts.find((p) => {
+    if (!p.published) return false;
+    // Check locale-specific slug first
+    if (locale && p.slugs?.[locale] === slug) return true;
+    // Check any locale slug
+    if (p.slugs && Object.values(p.slugs).includes(slug)) return true;
+    // Fallback to primary slug
+    return p.slug === slug;
+  });
 }
 
 export async function getPostById(id: string): Promise<BlogPost | undefined> {

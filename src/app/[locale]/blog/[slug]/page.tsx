@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getPostBySlug } from "@/lib/posts";
+import { getPostBySlug, getSlugForLocale } from "@/lib/posts";
 import ShareButtons from "./ShareButtons";
 import Image from "next/image";
 
@@ -20,6 +20,7 @@ export const dynamic = "force-dynamic";
 interface BlogPostFull {
   id: string;
   slug: string;
+  slugs?: Record<string, string>;
   title: Record<string, string>;
   excerpt: Record<string, string>;
   content: Record<string, string>;
@@ -36,7 +37,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = (await getPostBySlug(slug)) as unknown as BlogPostFull | undefined;
+  const post = (await getPostBySlug(slug, locale)) as unknown as BlogPostFull | undefined;
 
   if (!post) {
     return {
@@ -47,14 +48,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = post.title[locale] || post.title["en"] || "Untitled";
   const excerpt = post.excerpt[locale] || post.excerpt["en"] || "";
-  const canonicalUrl = `${baseUrl}/${locale}/blog/${post.slug}`;
+  const localeSlug = getSlugForLocale(post, locale);
+  const canonicalUrl = `${baseUrl}/${locale}/blog/${localeSlug}`;
   const ogImage = post.coverImage ? toAbsoluteUrl(post.coverImage) : undefined;
 
   const languages: Record<string, string> = {};
   for (const loc of routing.locales) {
-    languages[loc] = `${baseUrl}/${loc}/blog/${post.slug}`;
+    languages[loc] = `${baseUrl}/${loc}/blog/${getSlugForLocale(post, loc)}`;
   }
-  languages["x-default"] = `${baseUrl}/en/blog/${post.slug}`;
+  languages["x-default"] = `${baseUrl}/en/blog/${getSlugForLocale(post, "en")}`;
 
   return {
     title: `${title} | MeetingCost.team`,
@@ -88,7 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "blog" });
   const nav = await getTranslations({ locale, namespace: "nav" });
 
-  const post = (await getPostBySlug(slug)) as unknown as BlogPostFull | undefined;
+  const post = (await getPostBySlug(slug, locale)) as unknown as BlogPostFull | undefined;
   if (!post) notFound();
 
   const title = post.title[locale] || post.title["en"] || "Untitled";
@@ -99,7 +101,8 @@ export default async function BlogPostPage({ params }: Props) {
     Math.ceil(content.replace(/<[^>]*>/g, "").split(/\s+/).length / 200)
   );
 
-  const canonicalUrl = `${baseUrl}/${locale}/blog/${post.slug}`;
+  const localeSlug = getSlugForLocale(post, locale);
+  const canonicalUrl = `${baseUrl}/${locale}/blog/${localeSlug}`;
   const coverImageAbs = post.coverImage ? toAbsoluteUrl(post.coverImage) : undefined;
 
   // JSON-LD Structured Data for SEO

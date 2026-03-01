@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.json();
-    const { title, excerpt, content, author, tags, published, slug, coverImage } = body;
+    const { title, excerpt, content, author, tags, published, slug, slugs, coverImage } = body;
 
     if (!title || !Object.values(title as Record<string, string>).some(t => t?.trim())) {
       return NextResponse.json(
@@ -43,6 +43,7 @@ export async function POST(request: NextRequest) {
     const post = {
       id: crypto.randomUUID(),
       slug: slug as string,
+      ...(slugs && typeof slugs === "object" ? { slugs: slugs as Record<string, string> } : {}),
       title: title as Record<string, string>,
       excerpt: (excerpt || {}) as Record<string, string>,
       content: (content || {}) as Record<string, string>,

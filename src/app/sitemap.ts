@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts, getSlugForLocale } from "@/lib/posts";
 
 const baseUrl = "https://meetingcost.team";
 
@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     for (const post of posts) {
       entries.push({
-        url: `${baseUrl}/${locale}/blog/${post.slug}`,
+        url: `${baseUrl}/${locale}/blog/${getSlugForLocale(post, locale)}`,
         lastModified: new Date(post.updatedAt || post.createdAt),
         changeFrequency: "monthly",
         priority: 0.7,

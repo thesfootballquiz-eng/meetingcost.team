@@ -50,7 +50,8 @@
     "blog": "블로그",
     "contact": "문의",
     "policy": "이용약관",
-    "privacy": "개인정보"
+    "privacy": "개인정보",
+    "embed": "위젯 임베드"
   },
   "policy": {
     "title": "이용약관",
@@ -119,5 +120,47 @@
   },
   "lang_switcher": {
     "label": "언어"
+  },
+  "share": {
+    "title": "보고서 공유",
+    "total_cost": "회의 총 비용",
+    "duration_label": "시간",
+    "participants_label": "참여자",
+    "download_image": "이미지 다운로드",
+    "downloading": "다운로드 중...",
+    "copy_link": "링크 복사",
+    "copied": "복사됨!",
+    "share_button": "공유"
+  },
+  "embed": {
+    "page_title": "회의 비용 위젯 임베드",
+    "page_description": "실시간 회의 비용 계산기를 웹사이트나 블로그에 추가하세요. 무료, 경량, 가입 불필요.",
+    "benefit1_title": "손쉬운 통합",
+    "benefit1_desc": "코드 한 줄만 복사 붙여넣으면 됩니다. 모든 웹사이트에서 작동.",
+    "benefit2_title": "실시간 추적",
+    "benefit2_desc": "독자가 페이지에서 직접 회의 비용을 계산할 수 있습니다.",
+    "benefit3_title": "참여도 향상",
+    "benefit3_desc": "인터랙티브 도구가 페이지 체류 시간과 참여를 늘립니다.",
+    "method1_title": "스크립트 임베드 (권장)",
+    "method1_desc": "HTML에 이 코드를 추가하면 위젯이 자동 표시됩니다.",
+    "method2_title": "iFrame 임베드",
+    "method2_desc": "배치와 스타일을 더 세밀하게 제어하려면 iframe을 사용하세요.",
+    "preview_title": "라이브 미리보기",
+    "faq_title": "자주 묻는 질문",
+    "faq1_q": "위젯은 무료인가요?",
+    "faq1_a": "네, 완전 무료입니다. 가입이나 API 키가 필요 없습니다.",
+    "faq2_q": "웹사이트가 느려지나요?",
+    "faq2_a": "아니요. 스크립트가 작고 비동기 로딩됩니다. 페이지 속도에 영향 없습니다.",
+    "faq3_q": "외관을 사용자 정의할 수 있나요?",
+    "faq3_a": "다크 테마로 대부분의 사이트에 적합합니다. 커스텀 테마는 공개 예정입니다."
+  },
+  "widget": {
+    "people": "인원",
+    "rate": "시급",
+    "currency": "통화",
+    "meeting_cost": "회의 비용",
+    "attendees": "참여자",
+    "start": "회의 시작",
+    "stop": "회의 종료"
   }
 }

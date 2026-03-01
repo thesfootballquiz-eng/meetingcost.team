@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import InputForm from "./InputForm";
 import Ticker from "./Ticker";
 import SessionPanel from "./SessionPanel";
+import ShareReport from "./ShareReport";
 import { useMeetingSessions } from "@/hooks/useMeetingSessions";
 import type { MeetingSession } from "@/hooks/useMeetingSessions";
 
@@ -294,6 +295,13 @@ export default function MeetingCalculator() {
           </button>
         )}
       </div>
+
+      {/* Share Report — visible when stopped or paused with data */}
+      <ShareReport
+        attendees={attendees}
+        elapsedSeconds={Math.floor(currentElapsedRef.current)}
+        isVisible={hasStarted && !isRunning}
+      />
     </div>
   );
 }

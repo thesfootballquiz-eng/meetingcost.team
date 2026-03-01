@@ -50,7 +50,8 @@
     "blog": "ブログ",
     "contact": "お問い合わせ",
     "policy": "利用規約",
-    "privacy": "プライバシー"
+    "privacy": "プライバシー",
+    "embed": "ウィジェット埋め込み"
   },
   "policy": {
     "title": "利用規約",
@@ -119,5 +120,47 @@
   },
   "lang_switcher": {
     "label": "言語"
+  },
+  "share": {
+    "title": "レポートを共有",
+    "total_cost": "会議の総コスト",
+    "duration_label": "時間",
+    "participants_label": "参加者",
+    "download_image": "画像をダウンロード",
+    "downloading": "ダウンロード中...",
+    "copy_link": "リンクをコピー",
+    "copied": "コピーしました！",
+    "share_button": "共有"
+  },
+  "embed": {
+    "page_title": "会議コストウィジェットを埋め込む",
+    "page_description": "リアルタイムの会議コスト計算機をウェブサイトやブログに追加。無料、軽量、登録不要。",
+    "benefit1_title": "簡単統合",
+    "benefit1_desc": "コードを1行コピーペーストするだけ。あらゆるサイトで動作。",
+    "benefit2_title": "リアルタイム追跡",
+    "benefit2_desc": "読者がページ上で直接会議コストを計算できます。",
+    "benefit3_title": "エンゲージメント向上",
+    "benefit3_desc": "インタラクティブツールが滙在時間と参加を増やします。",
+    "method1_title": "スクリプト埋め込み（推奨）",
+    "method1_desc": "このコードをHTMLに追加。ウィジェットが自動表示されます。",
+    "method2_title": "iFrame埋め込み",
+    "method2_desc": "配置やスタイルを細かく制御する場合はiframeを使用。",
+    "preview_title": "ライブプレビュー",
+    "faq_title": "よくある質問",
+    "faq1_q": "ウィジェットは無料ですか？",
+    "faq1_a": "はい、完全無料です。登録もAPIキーも不要です。",
+    "faq2_q": "サイトが遅くなりますか？",
+    "faq2_a": "いいえ。スクリプトは小さく非同期読み込みです。ページ速度に影響しません。",
+    "faq3_q": "外観をカスタマイズできますか？",
+    "faq3_a": "ダークテーマでほとんどのサイトに合います。カスタムテーマは近日公開予定。"
+  },
+  "widget": {
+    "people": "人数",
+    "rate": "時給",
+    "currency": "通貨",
+    "meeting_cost": "会議コスト",
+    "attendees": "参加者",
+    "start": "会議開始",
+    "stop": "会議終了"
   }
 }

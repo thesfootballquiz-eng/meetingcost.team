@@ -35,6 +35,12 @@ export default function Footer() {
             >
               {t("nav.privacy")}
             </Link>
+            <Link
+              href="/embed"
+              className="text-gray-500 hover:text-gray-300 transition-colors"
+            >
+              {t("nav.embed")}
+            </Link>
           </nav>
         </div>
         <div className="text-center">

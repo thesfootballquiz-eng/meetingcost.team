@@ -50,7 +50,8 @@
     "blog": "Blog",
     "contact": "Liên hệ",
     "policy": "Điều khoản",
-    "privacy": "Bảo mật"
+    "privacy": "Bảo mật",
+    "embed": "Nhúng Widget"
   },
   "policy": {
     "title": "Điều khoản sử dụng",
@@ -119,5 +120,47 @@
   },
   "lang_switcher": {
     "label": "Ngôn ngữ"
+  },
+  "share": {
+    "title": "Chia sẻ báo cáo",
+    "total_cost": "Tổng chi phí cuộc họp",
+    "duration_label": "Thời lượng",
+    "participants_label": "Người tham gia",
+    "download_image": "Tải ảnh",
+    "downloading": "Đang tải...",
+    "copy_link": "Sao chép link",
+    "copied": "Đã sao chép!",
+    "share_button": "Chia sẻ"
+  },
+  "embed": {
+    "page_title": "Nhúng Widget Chi Phí Họp",
+    "page_description": "Thêm công cụ tính chi phí cuộc họp thời gian thực vào website hoặc blog của bạn. Miễn phí, nhẹ và không cần đăng ký.",
+    "benefit1_title": "Tích hợp dễ dàng",
+    "benefit1_desc": "Chỉ cần sao chép và dán một dòng mã. Hoạt động trên mọi website.",
+    "benefit2_title": "Theo dõi thời gian thực",
+    "benefit2_desc": "Người đọc có thể tính chi phí cuộc họp ngay trên trang của bạn.",
+    "benefit3_title": "Tăng tương tác",
+    "benefit3_desc": "Công cụ tương tác giúp tăng thời gian ở lại trang và sự tương tác.",
+    "method1_title": "Nhúng bằng Script (Khuyến nghị)",
+    "method1_desc": "Thêm mã này vào HTML. Widget sẽ tự động hiển thị.",
+    "method2_title": "Nhúng bằng iFrame",
+    "method2_desc": "Dùng iframe nếu bạn cần kiểm soát vị trí và giao diện hơn.",
+    "preview_title": "Xem trước",
+    "faq_title": "Câu hỏi thường gặp",
+    "faq1_q": "Widget có miễn phí không?",
+    "faq1_a": "Có, hoàn toàn miễn phí. Không cần đăng ký, không cần API key.",
+    "faq2_q": "Widget có làm chậm website không?",
+    "faq2_a": "Không. Script rất nhẹ và tải bất đồng bộ. Không ảnh hưởng tốc độ trang.",
+    "faq3_q": "Có thể tùy chỉnh giao diện không?",
+    "faq3_a": "Widget sử dụng giao diện tối phù hợp hầu hết website. Chủ đề tùy chỉnh sắp ra mắt."
+  },
+  "widget": {
+    "people": "Số người",
+    "rate": "Lương/giờ",
+    "currency": "Tiền tệ",
+    "meeting_cost": "Chi phí họp",
+    "attendees": "người",
+    "start": "Bắt đầu họp",
+    "stop": "Dừng họp"
   }
 }

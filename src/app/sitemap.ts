@@ -8,7 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const posts = await getAllPosts();
 
-  const staticPaths = ["", "/blog", "/contact", "/policy", "/privacy"];
+  const staticPaths = ["", "/blog", "/contact", "/policy", "/privacy", "/embed"];
 
   const entries: MetadataRoute.Sitemap = [];
 

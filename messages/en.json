@@ -50,7 +50,8 @@
     "blog": "Blog",
     "contact": "Contact",
     "policy": "Terms of Use",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "embed": "Embed Widget"
   },
   "policy": {
     "title": "Terms of Use",
@@ -119,5 +120,47 @@
   },
   "lang_switcher": {
     "label": "Language"
+  },
+  "share": {
+    "title": "Share Report",
+    "total_cost": "Total Meeting Cost",
+    "duration_label": "Duration",
+    "participants_label": "Participants",
+    "download_image": "Download Image",
+    "downloading": "Downloading...",
+    "copy_link": "Copy Link",
+    "copied": "Copied!",
+    "share_button": "Share"
+  },
+  "embed": {
+    "page_title": "Embed Meeting Cost Widget",
+    "page_description": "Add a real-time meeting cost calculator to your website or blog. Free, lightweight, and no registration required.",
+    "benefit1_title": "Easy Integration",
+    "benefit1_desc": "Just copy and paste one line of code. Works on any website.",
+    "benefit2_title": "Real-Time Tracking",
+    "benefit2_desc": "Your readers can calculate meeting costs directly on your page.",
+    "benefit3_title": "Boost Engagement",
+    "benefit3_desc": "Interactive tools increase time on page and reader engagement.",
+    "method1_title": "Script Embed (Recommended)",
+    "method1_desc": "Add this code to your HTML. The widget will render automatically.",
+    "method2_title": "iFrame Embed",
+    "method2_desc": "Use an iframe if you need more control over placement and styling.",
+    "preview_title": "Live Preview",
+    "faq_title": "Frequently Asked Questions",
+    "faq1_q": "Is the widget free to use?",
+    "faq1_a": "Yes, completely free. No registration, no API key required.",
+    "faq2_q": "Will it slow down my website?",
+    "faq2_a": "No. The script is tiny and loads asynchronously. It won't affect your page speed.",
+    "faq3_q": "Can I customize the appearance?",
+    "faq3_a": "The widget uses a dark theme that works on most sites. Custom themes are coming soon."
+  },
+  "widget": {
+    "people": "People",
+    "rate": "Rate/hr",
+    "currency": "Currency",
+    "meeting_cost": "Meeting Cost",
+    "attendees": "attendees",
+    "start": "Start Meeting",
+    "stop": "Stop Meeting"
   }
 }

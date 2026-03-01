@@ -50,7 +50,8 @@
     "blog": "博客",
     "contact": "联系我们",
     "policy": "使用条款",
-    "privacy": "隐私政策"
+    "privacy": "隐私政策",
+    "embed": "嵌入组件"
   },
   "policy": {
     "title": "使用条款",
@@ -119,5 +120,47 @@
   },
   "lang_switcher": {
     "label": "语言"
+  },
+  "share": {
+    "title": "分享报告",
+    "total_cost": "会议总成本",
+    "duration_label": "时长",
+    "participants_label": "参与者",
+    "download_image": "下载图片",
+    "downloading": "下载中...",
+    "copy_link": "复制链接",
+    "copied": "已复制！",
+    "share_button": "分享"
+  },
+  "embed": {
+    "page_title": "嵌入会议成本组件",
+    "page_description": "将实时会议成本计算器添加到您的网站或博客。免费、轻量，无需注册。",
+    "benefit1_title": "轻松集成",
+    "benefit1_desc": "只需复制粘贴一行代码，适用于任何网站。",
+    "benefit2_title": "实时追踪",
+    "benefit2_desc": "读者可以直接在您的页面上计算会议成本。",
+    "benefit3_title": "提高互动",
+    "benefit3_desc": "互动工具增加页面停留时间和读者参与度。",
+    "method1_title": "脚本嵌入（推荐）",
+    "method1_desc": "将此代码添加到HTML中，组件将自动渲染。",
+    "method2_title": "iFrame嵌入",
+    "method2_desc": "如需更多控制位置和样式，使用iframe。",
+    "preview_title": "实时预览",
+    "faq_title": "常见问题",
+    "faq1_q": "组件可以免费使用吗？",
+    "faq1_a": "是的，完全免费。无需注册，无需API密钥。",
+    "faq2_q": "会拖慢我的网站吗？",
+    "faq2_a": "不会。脚本很小且异步加载，不会影响页面速度。",
+    "faq3_q": "可以自定义外观吗？",
+    "faq3_a": "组件使用深色主题，适合大多数网站。自定义主题即将推出。"
+  },
+  "widget": {
+    "people": "人数",
+    "rate": "时薪",
+    "currency": "货币",
+    "meeting_cost": "会议成本",
+    "attendees": "参与者",
+    "start": "开始会议",
+    "stop": "结束会议"
   }
 }

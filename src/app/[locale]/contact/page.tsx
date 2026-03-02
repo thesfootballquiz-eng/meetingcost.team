@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import AdDisplay from "@/components/ads/AdDisplay";
 
 const baseUrl = "https://meetingcost.team";
 
@@ -71,6 +72,9 @@ export default async function ContactPage({ params }: Props) {
 
         <p className="text-gray-400 text-sm">{t("response_time")}</p>
       </div>
+
+      {/* Ad: Display */}
+      <AdDisplay />
 
       <div className="mt-10">
         <Link

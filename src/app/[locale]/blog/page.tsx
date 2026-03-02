@@ -4,6 +4,8 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { getAllPosts, getSlugForLocale } from "@/lib/posts";
 import Image from "next/image";
+import AdDisplay from "@/components/ads/AdDisplay";
+import AdMultiplex from "@/components/ads/AdMultiplex";
 
 const baseUrl = "https://meetingcost.team";
 
@@ -155,6 +157,9 @@ export default async function BlogPage({ params }: Props) {
             </Link>
           )}
 
+          {/* Ad: Display between featured and grid */}
+          <AdDisplay />
+
           {/* Rest of posts - grid */}
           {posts.length > 1 && (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -215,6 +220,9 @@ export default async function BlogPage({ params }: Props) {
           )}
         </>
       )}
+
+      {/* Ad: Multiplex at bottom */}
+      <AdMultiplex />
 
       <div className="mt-14 text-center">
         <Link

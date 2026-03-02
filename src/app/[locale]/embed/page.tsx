@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import AdDisplay from "@/components/ads/AdDisplay";
 
 const baseUrl = "https://meetingcost.team";
 
@@ -83,6 +84,9 @@ export default async function EmbedPage({ params }: Props) {
           </div>
         ))}
       </section>
+
+      {/* Ad: Display after benefits */}
+      <AdDisplay />
 
       {/* Method 1: Script embed */}
       <section className="mb-10">

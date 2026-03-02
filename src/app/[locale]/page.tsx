@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import MeetingCalculator from "@/components/MeetingCalculator";
+import AdDisplay from "@/components/ads/AdDisplay";
+import AdMultiplex from "@/components/ads/AdMultiplex";
 
 const baseUrl = "https://meetingcost.team";
 
@@ -41,6 +43,9 @@ export default async function HomePage({ params }: Props) {
 
       {/* Calculator */}
       <MeetingCalculator />
+
+      {/* Ad: Display between calculator and info */}
+      <AdDisplay />
 
       {/* Info Section */}
       <section className="mt-16 space-y-12">
@@ -86,6 +91,9 @@ export default async function HomePage({ params }: Props) {
           </p>
         </div>
       </section>
+
+      {/* Ad: Multiplex at bottom */}
+      <AdMultiplex />
     </div>
     </>
   );

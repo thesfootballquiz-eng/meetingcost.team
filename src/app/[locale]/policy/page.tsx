@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import AdDisplay from "@/components/ads/AdDisplay";
 
 const baseUrl = "https://meetingcost.team";
 
@@ -59,6 +60,9 @@ export default async function PolicyPage({ params }: Props) {
           <p>{t("changes_desc")}</p>
         </section>
       </div>
+
+      {/* Ad: Display */}
+      <AdDisplay />
 
       <div className="mt-10">
         <Link

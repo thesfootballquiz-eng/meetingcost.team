@@ -6,6 +6,8 @@ import { routing } from "@/i18n/routing";
 import { getPostBySlug, getSlugForLocale } from "@/lib/posts";
 import ShareButtons from "./ShareButtons";
 import Image from "next/image";
+import AdInArticle from "@/components/ads/AdInArticle";
+import AdMultiplex from "@/components/ads/AdMultiplex";
 
 const baseUrl = "https://meetingcost.team";
 
@@ -230,6 +232,9 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </header>
 
+        {/* Ad: In-Article after header */}
+        <AdInArticle />
+
         {/* Article Content */}
         <div
           className="rich-editor-content mb-12"
@@ -248,6 +253,9 @@ export default async function BlogPostPage({ params }: Props) {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
             {t("back_blog")}
           </Link>
+
+          {/* Ad: Multiplex at bottom of article */}
+          <AdMultiplex />
         </footer>
       </article>
     </>

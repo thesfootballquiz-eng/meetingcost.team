@@ -27,8 +27,8 @@ export default function AdDisplay({ className = "" }: { className?: string }) {
         ref={adRef}
         className="adsbygoogle"
         style={{ display: "block" }}
-        data-ad-client="ca-pub-1712738170439989"
-        data-ad-slot="3480343603"
+        data-ad-client="ca-pub-5262734754559750"
+        data-ad-slot="1336707630"
         data-ad-format="auto"
         data-full-width-responsive="true"
       />

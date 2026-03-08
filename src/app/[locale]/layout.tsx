@@ -87,7 +87,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1712738170439989"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5262734754559750"
           crossOrigin="anonymous"
         />
       </head>

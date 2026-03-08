@@ -27,7 +27,7 @@ export default function AdMultiplex({ className = "" }: { className?: string }) 
         style={{ display: "block" }}
         data-ad-format="autorelaxed"
         data-ad-client="ca-pub-1712738170439989"
-        data-ad-slot="7907587470"
+        data-ad-slot="7167143456"
       />
     </div>
   );

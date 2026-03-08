@@ -28,7 +28,7 @@ export default function AdInArticle({ className = "" }: { className?: string }) 
         data-ad-layout="in-article"
         data-ad-format="fluid"
         data-ad-client="ca-pub-1712738170439989"
-        data-ad-slot="1869731119"
+        data-ad-slot="4693023353"
       />
     </div>
   );

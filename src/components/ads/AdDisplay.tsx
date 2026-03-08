@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 /**
  * Display Ad (Auto format, responsive)
- * Slot: 1336707630
+ * Slot: 3480343603
  * Best for: general purpose banners between content sections
  */
 export default function AdDisplay({ className = "" }: { className?: string }) {
@@ -28,7 +28,7 @@ export default function AdDisplay({ className = "" }: { className?: string }) {
         className="adsbygoogle"
         style={{ display: "block" }}
         data-ad-client="ca-pub-1712738170439989"
-        data-ad-slot="1336707630"
+        data-ad-slot="3480343603"
         data-ad-format="auto"
         data-full-width-responsive="true"
       />
